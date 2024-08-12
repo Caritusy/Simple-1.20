@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c5743676-c592-4ae6-b505-5f87314dfae0}</ProjectGuid>
+    <RootNamespace>Simple</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>D:\C++\OpenSSL-Win32\lib\VC\x86\MDd;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\C++\include\boost_1_85_0;D:\C++\OpenSSL-Win32\include;D:\C++\stb;D:\C++\include\entt\src</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>D:\C++\OpenSSL-Win32\lib\VC\x86\MD;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>D:\C++\include\boost_1_85_0;D:\C++\OpenSSL-Win32\include;D:\C++\stb;D:\C++\include\entt\src</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SIMPLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
+      <AssemblyDebug>
+      </AssemblyDebug>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SIMPLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
+      <LinkTimeCodeGeneration />
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SIMPLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;SIMPLE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ImGui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="..\include\ImGui\backends\imgui_impl_opengl2.h" />
+    <ClInclude Include="..\include\ImGui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\include\ImGui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\include\ImGui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="..\include\ImGui\GL.h" />
+    <ClInclude Include="..\include\ImGui\gl3w.h" />
+    <ClInclude Include="..\include\ImGui\glcorearb.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx64\glew.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx64\glxew.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx64\wglew.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx86\glew.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx86\glxew.h" />
+    <ClInclude Include="..\include\ImGui\GL\GLx86\wglew.h" />
+    <ClInclude Include="..\include\ImGui\imconfig.h" />
+    <ClInclude Include="..\include\ImGui\imgui.h" />
+    <ClInclude Include="..\include\ImGui\imgui_internal.h" />
+    <ClInclude Include="..\include\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\include\ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\include\ImGui\imstb_truetype.h" />
+    <ClInclude Include="..\include\openssl\aes.h" />
+    <ClInclude Include="..\include\openssl\asn1.h" />
+    <ClInclude Include="..\include\openssl\asn1t.h" />
+    <ClInclude Include="..\include\openssl\bio.h" />
+    <ClInclude Include="..\include\openssl\blowfish.h" />
+    <ClInclude Include="..\include\openssl\bn.h" />
+    <ClInclude Include="..\include\openssl\buffer.h" />
+    <ClInclude Include="..\include\openssl\camellia.h" />
+    <ClInclude Include="..\include\openssl\cast.h" />
+    <ClInclude Include="..\include\openssl\chacha.h" />
+    <ClInclude Include="..\include\openssl\cmac.h" />
+    <ClInclude Include="..\include\openssl\cms.h" />
+    <ClInclude Include="..\include\openssl\comp.h" />
+    <ClInclude Include="..\include\openssl\conf.h" />
+    <ClInclude Include="..\include\openssl\conf_api.h" />
+    <ClInclude Include="..\include\openssl\crypto.h" />
+    <ClInclude Include="..\include\openssl\ct.h" />
+    <ClInclude Include="..\include\openssl\curve25519.h" />
+    <ClInclude Include="..\include\openssl\des.h" />
+    <ClInclude Include="..\include\openssl\dh.h" />
+    <ClInclude Include="..\include\openssl\dsa.h" />
+    <ClInclude Include="..\include\openssl\dtls1.h" />
+    <ClInclude Include="..\include\openssl\ec.h" />
+    <ClInclude Include="..\include\openssl\ecdh.h" />
+    <ClInclude Include="..\include\openssl\ecdsa.h" />
+    <ClInclude Include="..\include\openssl\engine.h" />
+    <ClInclude Include="..\include\openssl\err.h" />
+    <ClInclude Include="..\include\openssl\evp.h" />
+    <ClInclude Include="..\include\openssl\gost.h" />
+    <ClInclude Include="..\include\openssl\hkdf.h" />
+    <ClInclude Include="..\include\openssl\hmac.h" />
+    <ClInclude Include="..\include\openssl\idea.h" />
+    <ClInclude Include="..\include\openssl\kdf.h" />
+    <ClInclude Include="..\include\openssl\lhash.h" />
+    <ClInclude Include="..\include\openssl\md4.h" />
+    <ClInclude Include="..\include\openssl\md5.h" />
+    <ClInclude Include="..\include\openssl\modes.h" />
+    <ClInclude Include="..\include\openssl\objects.h" />
+    <ClInclude Include="..\include\openssl\obj_mac.h" />
+    <ClInclude Include="..\include\openssl\ocsp.h" />
+    <ClInclude Include="..\include\openssl\opensslconf.h" />
+    <ClInclude Include="..\include\openssl\opensslfeatures.h" />
+    <ClInclude Include="..\include\openssl\opensslv.h" />
+    <ClInclude Include="..\include\openssl\ossl_typ.h" />
+    <ClInclude Include="..\include\openssl\pem.h" />
+    <ClInclude Include="..\include\openssl\pem2.h" />
+    <ClInclude Include="..\include\openssl\pkcs12.h" />
+    <ClInclude Include="..\include\openssl\pkcs7.h" />
+    <ClInclude Include="..\include\openssl\poly1305.h" />
+    <ClInclude Include="..\include\openssl\rand.h" />
+    <ClInclude Include="..\include\openssl\rc2.h" />
+    <ClInclude Include="..\include\openssl\rc4.h" />
+    <ClInclude Include="..\include\openssl\ripemd.h" />
+    <ClInclude Include="..\include\openssl\rsa.h" />
+    <ClInclude Include="..\include\openssl\safestack.h" />
+    <ClInclude Include="..\include\openssl\sha.h" />
+    <ClInclude Include="..\include\openssl\sm3.h" />
+    <ClInclude Include="..\include\openssl\sm4.h" />
+    <ClInclude Include="..\include\openssl\srtp.h" />
+    <ClInclude Include="..\include\openssl\ssl.h" />
+    <ClInclude Include="..\include\openssl\ssl2.h" />
+    <ClInclude Include="..\include\openssl\ssl23.h" />
+    <ClInclude Include="..\include\openssl\ssl3.h" />
+    <ClInclude Include="..\include\openssl\stack.h" />
+    <ClInclude Include="..\include\openssl\tls1.h" />
+    <ClInclude Include="..\include\openssl\ts.h" />
+    <ClInclude Include="..\include\openssl\txt_db.h" />
+    <ClInclude Include="..\include\openssl\ui.h" />
+    <ClInclude Include="..\include\openssl\ui_compat.h" />
+    <ClInclude Include="..\include\openssl\whrlpool.h" />
+    <ClInclude Include="..\include\openssl\x509.h" />
+    <ClInclude Include="..\include\openssl\x509v3.h" />
+    <ClInclude Include="..\include\openssl\x509_vfy.h" />
+    <ClInclude Include="..\Memory\GameData.h" />
+    <ClInclude Include="..\Memory\Hooks.h" />
+    <ClInclude Include="..\Memory\MinHook.h" />
+    <ClInclude Include="..\Memory\SlimMem.h" />
+    <ClInclude Include="..\SDK\BlockLegacy.h" />
+    <ClInclude Include="..\SDK\ClientInstance.h" />
+    <ClInclude Include="..\SDK\entity.h" />
+    <ClInclude Include="..\SDK\EntityContext.h" />
+    <ClInclude Include="..\SDK\EntityId.h" />
+    <ClInclude Include="..\SDK\EntityIdTraits.h" />
+    <ClInclude Include="..\SDK\GameMode.h" />
+    <ClInclude Include="..\SDK\Inventory.h" />
+    <ClInclude Include="..\SDK\InventoryTransaction.h" />
+    <ClInclude Include="..\SDK\Item.h" />
+    <ClInclude Include="..\SDK\LoopbackPacketSender.h" />
+    <ClInclude Include="..\SDK\Packet.h" />
+    <ClInclude Include="..\SDK\Tag.h" />
+    <ClInclude Include="..\SDK\TextHolder.h" />
+    <ClInclude Include="..\Utils\DrawUtils.h" />
+    <ClInclude Include="..\Utils\easylogging++.h" />
+    <ClInclude Include="..\Utils\HMath.h" />
+    <ClInclude Include="..\Utils\Json.hpp" />
+    <ClInclude Include="..\Utils\Keys.h" />
+    <ClInclude Include="..\Utils\network.h" />
+    <ClInclude Include="..\Utils\obfuscate.h" />
+    <ClInclude Include="..\Utils\Target.h" />
+    <ClInclude Include="..\Utils\TextFormat.h" />
+    <ClInclude Include="..\Utils\TimerUtil.h" />
+    <ClInclude Include="..\Utils\Utils.h" />
+    <ClInclude Include="..\Utils\xorstr.h" />
+    <ClInclude Include="Command\CommandMgr.h" />
+    <ClInclude Include="Command\Commands\BindCommand.h" />
+    <ClInclude Include="Command\Commands\ConfigCommand.h" />
+    <ClInclude Include="Command\Commands\GameModeCommand.h" />
+    <ClInclude Include="Command\Commands\HelpCommand.h" />
+    <ClInclude Include="Command\Commands\IMCCommand.h" />
+    <ClInclude Include="Command\Commands\ImportCommand.h" />
+    <ClInclude Include="Command\Commands\PlaysoundCommand.h" />
+    <ClInclude Include="Command\Commands\TeleportCommand.h" />
+    <ClInclude Include="Command\Commands\UserCommand.h" />
+    <ClInclude Include="Config\ConfigManager.h" />
+    <ClInclude Include="Loader.h" />
+    <ClInclude Include="Menu\Fonts.hpp" />
+    <ClInclude Include="Menu\Gui.h" />
+    <ClInclude Include="Module\ModuleManager.h" />
+    <ClInclude Include="Module\Modules\AntiBot.h" />
+    <ClInclude Include="Module\Modules\Arraylist.h" />
+    <ClInclude Include="Module\Modules\BlockReach.h" />
+    <ClInclude Include="Module\Modules\FullBright.h" />
+    <ClInclude Include="Module\Modules\GuiMod.h" />
+    <ClInclude Include="Module\Modules\HudModule.h" />
+    <ClInclude Include="Module\Modules\Killaura.h" />
+    <ClInclude Include="Module\Modules\Module.h" />
+    <ClInclude Include="Module\Modules\NoPacket.h" />
+    <ClInclude Include="Module\Modules\NoWeb.h" />
+    <ClInclude Include="Module\Modules\Nuker.h" />
+    <ClInclude Include="Module\Modules\PacketLogger.h" />
+    <ClInclude Include="Module\Modules\Reach.h" />
+    <ClInclude Include="Module\Modules\Spammer.h" />
+    <ClInclude Include="Module\Modules\Velocity.h" />
+    <ClInclude Include="User\UserManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\include\ImGui\backends\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="..\include\ImGui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\include\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\include\ImGui\gl3w.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="..\Memory\GameData.cpp" />
+    <ClCompile Include="..\Memory\Hooks.cpp" />
+    <ClCompile Include="..\Memory\SlimMem.cpp" />
+    <ClCompile Include="..\SDK\BlockLegacy.cpp" />
+    <ClCompile Include="..\SDK\ClientInstance.cpp" />
+    <ClCompile Include="..\SDK\entity.cpp" />
+    <ClCompile Include="..\SDK\EntityContext.cpp" />
+    <ClCompile Include="..\SDK\EntityId.cpp" />
+    <ClCompile Include="..\SDK\EntityIdTraits.cpp" />
+    <ClCompile Include="..\SDK\GameMode.cpp" />
+    <ClCompile Include="..\SDK\Inventory.cpp" />
+    <ClCompile Include="..\SDK\InventoryTransaction.cpp" />
+    <ClCompile Include="..\SDK\Item.cpp" />
+    <ClCompile Include="..\SDK\Packet.cpp" />
+    <ClCompile Include="..\SDK\Tag.cpp" />
+    <ClCompile Include="..\Utils\DrawUtils.cpp" />
+    <ClCompile Include="..\Utils\easylogging++.cc" />
+    <ClCompile Include="..\Utils\network.cpp" />
+    <ClCompile Include="..\Utils\Target.cpp" />
+    <ClCompile Include="..\Utils\TextFormat.cpp" />
+    <ClCompile Include="..\Utils\TimerUtil.cpp" />
+    <ClCompile Include="..\Utils\Utils.cpp" />
+    <ClCompile Include="Command\CommandMgr.cpp" />
+    <ClCompile Include="Command\Commands\BindCommand.cpp" />
+    <ClCompile Include="Command\Commands\ConfigCommand.cpp" />
+    <ClCompile Include="Command\Commands\GameModeCommand.cpp" />
+    <ClCompile Include="Command\Commands\HelpCommand.cpp" />
+    <ClCompile Include="Command\Commands\IMCCommand.cpp" />
+    <ClCompile Include="Command\Commands\ImportCommand.cpp" />
+    <ClCompile Include="Command\Commands\PlaysoundCommand.cpp" />
+    <ClCompile Include="Command\Commands\TeleportCommand.cpp" />
+    <ClCompile Include="Command\Commands\UserCommand.cpp" />
+    <ClCompile Include="Config\ConfigManager.cpp" />
+    <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="Menu\Gui.cpp" />
+    <ClCompile Include="Module\ModuleManager.cpp" />
+    <ClCompile Include="Module\Modules\AntiBot.cpp" />
+    <ClCompile Include="Module\Modules\Arraylist.cpp" />
+    <ClCompile Include="Module\Modules\BlockReach.cpp" />
+    <ClCompile Include="Module\Modules\FullBright.cpp" />
+    <ClCompile Include="Module\Modules\GuiMod.cpp" />
+    <ClCompile Include="Module\Modules\HudModule.cpp" />
+    <ClCompile Include="Module\Modules\Killaura.cpp" />
+    <ClCompile Include="Module\Modules\Module.cpp" />
+    <ClCompile Include="Module\Modules\NoPacket.cpp" />
+    <ClCompile Include="Module\Modules\NoWeb.cpp" />
+    <ClCompile Include="Module\Modules\Nuker.cpp" />
+    <ClCompile Include="Module\Modules\PacketLogger.cpp" />
+    <ClCompile Include="Module\Modules\Reach.cpp" />
+    <ClCompile Include="Module\Modules\Spammer.cpp" />
+    <ClCompile Include="Module\Modules\Velocity.cpp" />
+    <ClCompile Include="User\UserManager.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
